@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "Peripheral_Pulse_Analyzer"
+version = "0.1.0"
+description = ""
+authors = ["jay"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+black = "^22.6.0"
+pylint = "^2.14.5"
+pre-commit = "^2.20.0"
+
+[tool.black]
+line-length = 132
+target-version = ['py37', 'py38', 'py39', 'py310' ]
+include = '(peripheral_pulse_analyzer\/.*$|\.pyi?$)'
+exclude = '''
+/(
+    \.git
+  | __pycache__
+  | \.tox
+  | \.venv
+  | build
+  | dist
+  | docs
+  | notes
+)/
+'''
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
